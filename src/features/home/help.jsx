@@ -57,7 +57,7 @@ export default function Help() {
           your email address. The email address provided will primarily be used
           for communication. A short questionnaire will also be asked after you
           register so that we know the demographic of the volunteers! Once
-          that&apos;s finished, you can start contributing to Atlas by doing 3
+          that&apos;s finished, you can start contributing to Imprint by doing 3
           tasks:
         </P>
       </div>

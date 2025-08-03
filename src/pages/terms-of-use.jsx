@@ -7,41 +7,40 @@ import P from 'ui/heading/p';
 export default function Index() {
     return (
         <Page
-            title="Terms of Use - Atlas"
-            description="This is our terms of use and privacy policy for using Atlas."
+            title="Terms of Use - Imprint"
+            description="This is our terms of use and privacy policy for using Imprint."
             contribute={false}
         >
             <section className='container mx-auto px-5'>
                 <div className='mx-16'>
-                    <H1> Terms of Use and Privacy Policy </H1>
+                    <H1>Terms of Use and Privacy Policy </H1>
                     <br />
-                    <P className="text-xl mb-2"> This terms of use and privacy policy will help you understand how the student researchers will use and
-                        protect the data you provide to us when you visit and use Atlas. </P>
+                    <P className="text-xl mb-2">This terms of use and privacy policy will help you understand how Human-X Interaction Lab and student researchers will use and
+                        protect the data you provide to us when you visit and use Imprint. </P>
                     <br />
                     <H3 className="mb-2"> Overview</H3>
-                    <P> Greetings! We are Donnielle Andres, Joshua Ejercito, Jared Limjoco, and Rijan Opalla. We are currently working on
-                        our undergraduate thesis titled &quot;Hey! I’m Walkin’ Here: Enhancing Urban Planning Through Remote Sensing for 
-                        Monitoring Sidewalk Accessibility Challenges Faced by Abled Individuals.&quot;. In this study, we want to determine 
-                        the accessibility of sidewalks by giving them scores based on a certain criteria. With this, we can map out the 
-                        accessibility of sidewalks in the Philippines and allow for evidence-based solutions and policies in the future. </P>
+                    <P> Greetings! I am Francis Bawa and I'm currently working on my Master's thesis at De La Salle University titled &quot;Advancing Urban Planning Through Sidwalk 
+                        Obstruction Detection Near Key Transit Areas with Human-in-the-Loop Object Detection and Recognition&quot;. In this study, I'm trying to implement a sidewalk
+                        obstruction detection tool purely from the help of volunteers like you by using this human-in-the-loop system. Currently, I'm still trying to finalize the overall
+                        look and feel of the website as well as work on the integration of the annotated data in machine learning models.</P>
                     <br />
-                    <P> As of the moment, we are in the process of annotating obstructions found in images of sidewalks. These labels will be used to
-                        re-train a computer vision model to automatically detect obstructions in the future. In order to successfully re-train the computer
-                        vision model, we would need a large number of annotations, hence we are looking for volunteers to label the images that we have
-                        prepared. </P>
+                    <P> My current focus is a mini-HCI study titled &quot;Enhancing Urban Crowdsourcing through Motivational Designs.&quot; This project explores how to effectively motivate users to contribute data voluntarily and meaningfully to support machine learning development.
+                        At this stage, I are currently looking for volunteers to help annotate images of sidewalks by labeling obstructions, which will be used to re-train a computer vision model to automatically detect these obstacles in the future. To ensure successful model retraining, imprint will need a large volume of labeled data.
+                        Your participation will directly support research on urban accessibility and the advancement of human-in-the-loop AI systems.</P>
                     <br />
                     <H3 className="mb-2"> Procedure</H3>
-                    <P> Register to Atlas through the &quot;Contribute&quot; Page, and provide the following:</P>
+                    <P> Register to Imprint through the &quot;Contribute&quot; Page, and provide the following:</P>
                     <div className="mx-5">
                         <P> •	Username </P>
                         <P> •	Email address </P>
                         <P> •	Password </P>
                         <P> •	City of Residence </P>
+                        <P> •	Frequently Walked Cities </P>
                         <P> •	Age </P>
-                        <P> •	Frequency of walking during yoru usual commute</P>
+                        <P> •	Frequency of walking during your usual commute</P>
                     </div>
                     <br />
-                    <P> After registering for annotation task, you may continue on to annotate street view images in our website.
+                    <P> After registering for annotation task, you may continue on to annotate street view images in the website.
                         You are to:  </P>
                     <div className="mx-5">
                         <P> •	Select obstructions that can be found along the sidewalk </P>
@@ -64,17 +63,17 @@ export default function Index() {
                             of this research. </P>
                     </div>
                     <br />
-                    <H3 className="mb-2"> What User Data We Collect</H3>
-                    <P> When you visit the website, we may collect the following data: </P>
+                    <H3 className="mb-2"> What User Data Imprint Collects</H3>
+                    <P> When you visit the website, Imprint may collect the following data: </P>
                     <div className="mx-5">
                         <P> •	Your email address and password used for this website.</P>
-                        <P> •	Other information such as city of residence, age, usage of mobility aids, frequency of commuting in a public
+                        <P> •	Other information such as city of residence, frequently walked cities, age, usage of mobility aids, frequency of commuting in a public
                             utility vehicle.</P>
                         <P> •	Your user activities such as the images you will annotate using our website.</P>
                     </div>
                     <br />
-                    <H3 className="mb-2"> Why We Collect Your Data</H3>
-                    <P> We are collecting your data for several reasons: </P>
+                    <H3 className="mb-2"> Why Imprint Collects Your Data</H3>
+                    <P> Imprint collectss your data for several reasons: </P>
                     <div className="mx-5">
                         <P> •	To better understand the profile / background of our users.</P>
                         <P> •	To improve our research on the accessibility of sidewalks in the Philippines.</P>
@@ -83,15 +82,12 @@ export default function Index() {
                     <H3 className="mb-2"> Safeguarding and Securing the Data</H3>
                     <P> The student researchers are committed to securing your data and keeping it confidential.
                         They have done all in its power to prevent data theft, unauthorized access, and disclosure by implementing the latest
-                        technologies and software, which help safeguard all the information we collect. The student researchers will not lease,
+                        technologies and software, which help safeguard all the information Imprint collect. The student researchers will not lease,
                         sell or distribute your personal information to any third parties, all the information will solely be for the purpose of
                         our research.</P>
                     <br />
                     <H3 className="mb-2"> Restricting the Collection of your Personal Data</H3>
-                    <P> At some point, you might wish to restrict the use and collection of your personal data.
-                        You can achieve this by doing the following:</P>
-                    <P> If you have already agreed to share your information with us, feel free to contact us via email, or through our social
-                        media accounts, and we will be more than happy to change this for you.</P>
+                    <P> At some point, you might wish to restrict the use and collection of your personal data. If you have already agreed to share your information with us, feel free to contact via email, and I will be more than happy to change this for you.</P>
                     <br />
                     <br />
                 </div>

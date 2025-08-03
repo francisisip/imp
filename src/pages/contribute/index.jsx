@@ -19,13 +19,13 @@ export default function ContributePage({ session }) {
 
   return (
     <Page
-      title="Dashboard - Atlas Contribute"
-      description="Contribute to Atlas! Let's make our streets accessible for all."
+      title="Dashboard - Imprint Contribute"
+      description="Contribute to Imprint! Let's make our streets accessible for all."
       contribute
     >
       <section className="container flex flex-col pb-24 mx-auto px-5">
         <div className="lg:max-w-7xl lg:w-4/5 lg:mx-auto">
-          <H1>Contribute to Atlas</H1>
+          <H1>Contribute to Imprint</H1>
           <div className="flex flex-col pt-8 md:flex-row justify-between items-center md:items-start">
             <H2>{username}</H2>
             <div className="mt-4 md:mt-2 flex space-x-4">

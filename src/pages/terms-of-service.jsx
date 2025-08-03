@@ -7,8 +7,8 @@ import P from 'ui/heading/p';
 export default function Index() {
     return (
         <Page
-            title="Terms of Service - Atlas"
-            description="This is our Terms of Service for using Atlas."
+            title="Terms of Service - Imprint"
+            description="This is our Terms of Service for using Imprint."
             contribute={false}
         >
             <section className='container mx-auto px-5'>

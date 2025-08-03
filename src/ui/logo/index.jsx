@@ -27,7 +27,7 @@ export default function Logo({ subTitle, white }) {
             color: white ? 'white' : '#1F2937',
           }}
         >
-          Cityzen
+          Imprint
         </h1>
         <em
           className="text-gray-500"

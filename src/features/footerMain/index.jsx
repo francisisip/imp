@@ -26,7 +26,7 @@ export default function Footer() {
             <div className="flex flex-wrap">
               <a
                 className={styles.button}
-                href="mailto:sidewalk.thesis@gmail.com"
+                href="mailto:francis_bawa@dlsu.edu.ph"
                 target="_blank"
                 rel="noreferrer"
               >
@@ -45,7 +45,7 @@ export default function Footer() {
 
               <a
                 className={styles.button}
-                href="https://github.com/jared-limjoco/thesis-site"
+                href="https://github.com/dlsudatasci/imprint"
                 target="_blank"
                 rel="noreferrer"
               >
@@ -72,7 +72,14 @@ export default function Footer() {
               <p className="text-white">
                 {/* &copy;
                 {' '} */}
-                <strong>Human-X Interactions Lab</strong>
+                <a 
+                  href="https://dlsucomet.github.io/" 
+                  target="_blank" 
+                  rel="noopener noreferrer" 
+                  className="font-bold"
+                >
+                  Human-X Interactions Lab
+                </a>
               </p>
             </div>
             <div className="md:flex-1 md:px-4 text-center md:text-right">

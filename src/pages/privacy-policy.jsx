@@ -7,15 +7,15 @@ import P from 'ui/heading/p';
 export default function Index() {
     return (
         <Page
-            title="Terms of Use - Atlas"
-            description="This is our terms of use and privacy policy for using Atlas."
+            title="Terms of Use - Imprint"
+            description="This is our terms of use and privacy policy for using Imprint."
             contribute={false}
         >
             <section className='container mx-auto px-5'>
                 <H1> Terms of Use and Privacy Policy </H1>
                 <br />
                 <P className="text-xl mb-2"> This terms of use and privacy policy will help you understand how the student researchers will use and
-                    protect the data you provide to us when you visit and use Atlas. </P>
+                    protect the data you provide to us when you visit and use Imprint. </P>
                 <br />
                 <H3 className="mb-2"> Overview</H3>
                 <P> Greetings! We are Nicolas Sy, Rafael Topacio, Lynux Ansay and Henric Tay. We are currently working on
@@ -29,7 +29,7 @@ export default function Index() {
                     prepared. </P>
                 <br />
                 <H3 className="mb-2"> Procedure</H3>
-                <P className="mb-2"> Register to Atlas through the &quot;Contribute&quot; Page, and provide the following:</P>
+                <P className="mb-2"> Register to Imprint through the &quot;Contribute&quot; Page, and provide the following:</P>
                 <P> •	Username </P>
                 <P> •	Email address </P>
                 <P> •	Password </P>

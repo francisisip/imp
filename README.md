@@ -1,6 +1,6 @@
-# **imprint**  | Human-in-the-Loop Crowdsourcing Platform
+# **Imprint**  | Human-in-the-Loop Crowdsourcing Platform
 
-imprint is a human-in-the-loop crowdsourcing application for data collection and continuous integration with machine learning model training.
+Imprint is a human-in-the-loop crowdsourcing application for data collection and continuous integration with machine learning model training.
 
 💡 Current Use Case
 > Crowd-powered labeling of sidewalk obstructions and walkability for sidewalk obstruction detection research.
@@ -15,7 +15,7 @@ imprint is a human-in-the-loop crowdsourcing application for data collection and
 - Support scalable data collection for training, validation, and testing of AI systems.
 
 🚀 Roadmap
-- [ ] Develop and deploy base and modified version of imprint for mini-HCI study.
+- [ ] Develop and deploy base and modified version of Imprint for mini-HCI study.
     - [x] Create new database and upload sidewalk data
     - [x] Modify registration to include frequently walked cities of users
     - [x] Implement new city-based algorithm for modified version

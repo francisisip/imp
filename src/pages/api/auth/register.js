@@ -34,7 +34,7 @@ const handler = async (req, res) => {
       const totalAnnotations = 0;
       const activities = [
         {
-          activity: "Registered to Atlas",
+          activity: "Registered to Imprint",
           date: dateRegistered,
           tag: "register",
         },

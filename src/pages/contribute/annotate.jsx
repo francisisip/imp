@@ -94,8 +94,8 @@ export default function AnnotatePage() {
 
   return (
     <Page
-      title="Annotate - Atlas Contribute"
-      description="Contribute to Atlas! Let's make our streets accessible for all."
+      title="Annotate - Imprint Contribute"
+      description="Contribute to Imprint! Let's make our streets accessible for all."
       contribute
     >
       {renderComponent()}

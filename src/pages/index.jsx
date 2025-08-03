@@ -7,8 +7,8 @@ import Raffle from "@/features/home/raffle";
 export default function Index() {
   return (
     <Page
-      title="Home - Cityzen"
-      description="Welcome to Atlas! Help us learn more about our streets."
+      title="Home - Imprint"
+      description="Welcome to Imprint! Help us learn more about our streets."
       contribute={false}
     >
       <Hero />

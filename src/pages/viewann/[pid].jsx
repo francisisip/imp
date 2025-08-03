@@ -4,8 +4,8 @@ export default function ViewAnnotation({ data }) {
   // console.log(data);
   return (
     <Page
-      title="About - Atlas"
-      description="Learn more about Atlas, our crowdsourcing platform for street accessibility."
+      title="About - Imprint"
+      description="Learn more about Imprint, our crowdsourcing platform for street accessibility."
       contribute={false}
     >
       <p>{data.username}</p>
