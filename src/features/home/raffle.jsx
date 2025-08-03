@@ -27,9 +27,6 @@ export default function Raffle() {
           }`}
         >
           <H2>Rewards</H2>
-          <P>
-            By helping us annotate, you are eligble to win the following prizes
-          </P>
         </div>
         <div
           className={`flex justify-around flex-wrap mt-4 duration-300 ease-in ${
@@ -37,13 +34,8 @@ export default function Raffle() {
           }`}
         >
           <div className={styles.prize}>
-            <H3>Raffle Prize</H3>
             <P className={styles.infoPrize}>
-              Fifteen lucky annotators will have a chance to win our raffle prize.
-            </P>
-            <P className="font-bold">
-            PHP 100.00 each
-            </P>
+              This project <strong>does not</strong> offer monetary rewards. Instead, it encourages volunteers to contribute through personal motivation, supporting research and promoting urban walkability to help create better cities for everyone.            </P>
           </div>
         </div>
       </div>

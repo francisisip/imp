@@ -20,8 +20,7 @@ export default function Hero() {
         <H1>Welcome to Imprint</H1>
         <div className="mt-4">
           <P>
-          We aim to enhance urban planning through remote sensing for monitoring sidewalk 
-          accessibility challenges faced by abled individuals.
+            We aim to accelerate machine learning development through voluntary crowdsourcing in a human-in-the-loop system.
           </P>
         </div>
         <div className="mt-5 flex">
@@ -32,8 +31,7 @@ export default function Hero() {
         </div>
       </div>
       <div className="flex pt-12">
-        <div className={`md:ml-6 duration-100 ease-in ${scrollState < 1 ? 'opacity-0' : 'opacity-100'}`}>
-          <div style={{ position: 'relative', height: '450px', width: '300px' }}>
+        <div style={{ position: 'relative', height: '450px', width: '300px' }} className="rounded-lg overflow-hidden">
             <Image
               src="/images/home/hero1.jpg"
               fill
@@ -41,9 +39,8 @@ export default function Hero() {
               alt="Sidewalk in Manila 1"
             />
           </div>
-        </div>
         <div className={`mt-12 -ml-12 duration-500 ease-in ${scrollState < 1 ? 'opacity-0' : 'opacity-100'}`}>
-          <div style={{ position: 'relative', height: '450px', width: '300px' }} className="shadow-xl">
+          <div style={{ position: 'relative', height: '450px', width: '300px' }} className="shadow-xl rounded-lg overflow-hidden">
             <Image
               src="/images/home/hero2.jpg"
               fill

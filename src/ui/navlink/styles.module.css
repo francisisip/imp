@@ -6,7 +6,7 @@
   content: " ";
   display: block;
   height: 2px;
-  background: var(--c-primary);
+  background: var(--c-accent);
   transition: width 0.3s ease 0s, left 0.3s ease 0s;
   width: 0%;
 }
@@ -29,7 +29,7 @@
   height: 2px;
   left: 0;
   /* position: absolute; */
-  background: var(--c-accent);
+  background: var(--c-primary);
   transition: width 0.3s ease 0s, left 0.3s ease 0s;
   width: 100%;
 }

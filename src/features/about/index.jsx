@@ -1,5 +1,6 @@
 /* eslint-disable no-use-before-define */
 import React, { useState, useEffect } from 'react';
+import Link from 'next/link';
 
 import AboutSlide from './aboutSlide';
 
@@ -21,37 +22,38 @@ export default function AboutSection() {
     <section className="container mx-auto">
       <AboutSlide
         title="The Why"
-        head="Unwalkable Cities"
+        head="Collaborative AI Through Human Effort"
         img="theWhy.jpg"
-        desc="Many Filipinos living in urban areas rely heavily on roads and
-                sidewalks to accomplish their daily routines. Given that only 31%
-                of the nation’s households owns at least one car, quality
-                public infrastructure must be made available and accessible to all
-                people. However, this is not always the case. Hundreds if not thousands of sidewalks
-                are either broken, narrow, unsafe, or uncomfortable to work with. With
-                the use of our sidewalk rating and labeling platform, we hope to
-                introduce a method of collecting sidewalk accessibility ratings in the Philippines."
+        desc="Imprint was built to support scalable and voluntary crowdsourcing for machine learning development. 
+              As ML models rely heavily on high-quality data, there is a growing need for platforms that make data 
+              collection easier and more inclusive. Imprint encourages civic participation in annotation tasks that 
+              contribute to real-world research, especially in areas like urban walkability and sidewalk obstruction detection."
         active={slideState === 0}
       />
       <AboutSlide
         title="The How"
-        head="Rating Sidewalk Accessibility"
+        head="Human-in-the-Loop System for ML Models"
         img="theHow.jpg"
-        desc="Using your annotations as training data, we hope to train a machine
-        learning model capable of assessing sidewalk assessibility. We use object detection models 
-        to identify sidewalk obstructions found on sidewalks. You will also be able to append 
-        additional annotations when necessary."
+        desc="Imprint functions as a human-in-the-loop platform where users annotate images to support the creation of datasets 
+              for training, validating, and testing machine learning models. The platform continuously integrates human input into 
+              ML workflows, helping make AI systems more responsive and accurate."
         active={slideState === 1}
       />
       <AboutSlide
         title="The Who"
-        head="Meet The Team"
+        head="Human-X Interactions Lab Research Center"
         img="theWho.jpg"
-        desc='We are a group of Computer Science majors from the College of
-        Computer Studies, De La Salle University, and we are currently
-        working on building this sidewalk rating and labeling platform for our undergraduate
-        thesis entitled "Hey! I’m Walkin’ Here: Enhancing Urban Planning Through Remote Sensing 
-        for Monitoring Sidewalk Accessibility Challenges Faced by Abled Individuals.".'
+        desc={
+              <>
+            Imprint is currently being developed by Francis Bawa, a BSMS Computer Science student from De La Salle University with 
+            interests in human-computer interaction and human centered mobility. The platform invites volunteers, students, and everyday 
+            users to participate in meaningful data annotation. By contributing to Imprint, users help improve AI models while supporting 
+            research that addresses real social and urban challenges. If you are interested in learning more about the research, please read our{' '}
+            <Link href="/terms-of-use" className="text-primary hover:underline">
+              Terms of Use
+            </Link>.
+          </>
+        }
         active={slideState === 2}
       />
       <div className="z-10 flex justify-end max-w-5xl mx-auto mt-10 relative mb-12">

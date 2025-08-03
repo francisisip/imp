@@ -4,7 +4,7 @@ export default function Logo({ subTitle, white }) {
   return (
     <div style={{ display: 'flex', alignItems: 'center' }}>
       <img
-        src="/images/logo/logo2.svg"
+        src="/images/logo/logo.jpeg"
         alt="Logo"
         style={{
           height: `${logoHeight}px`,

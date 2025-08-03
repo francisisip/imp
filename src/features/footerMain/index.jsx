@@ -2,18 +2,14 @@
 import Link from "next/link";
 
 import Logo from "@/ui/logo";
+import HXIL from "@/ui/logo/hxil";
 import styles from "./styles.module.css";
 
 export default function Footer() {
   return (
     <footer className="bg-gray-800 pt-6 md:pt-12 w-full relative z-10">
       <div className="px-4 mx-auto">
-        <div className="md:flex justify-between md:flex-wrap md:-mx-4 md:pb-6">
-          <Link passHref href="/">
-            <div className="md:px-4 mt-4">
-              <Logo height={50} white />
-            </div>
-          </Link>
+        <div className="md:flex justify-center md:flex-wrap md:-mx-4 md:pb-6">
 
           <div className="lg:w-1/3 md:px-4 mb-4">
             <h4 className="text-white text-2xl">
@@ -72,14 +68,9 @@ export default function Footer() {
               <p className="text-white">
                 {/* &copy;
                 {' '} */}
-                <a 
-                  href="https://dlsucomet.github.io/" 
-                  target="_blank" 
-                  rel="noopener noreferrer" 
-                  className="font-bold"
-                >
-                  Human-X Interactions Lab
-                </a>
+                <Link passHref href="https://github.com/dlsudatasci/imprint"> 
+                    <HXIL height={50} white />
+                </Link>
               </p>
             </div>
             <div className="md:flex-1 md:px-4 text-center md:text-right">

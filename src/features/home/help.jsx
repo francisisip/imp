@@ -51,14 +51,11 @@ export default function Help() {
       <div>
         <H2 className="text-center">How can you help?</H2>
         <P className="text-center py-5 lg:mx-20">
-          You must first sign up for our platform so that we can track the
-          volunteers that are using the platform. No need to worry since we will
+          You must first sign up to the platform so that imprint can track the
+          volunteers that are using the platform. No need to worry since imprint will
           not be collecting any personal identifiable information (PII) except
-          your email address. The email address provided will primarily be used
-          for communication. A short questionnaire will also be asked after you
-          register so that we know the demographic of the volunteers! Once
-          that&apos;s finished, you can start contributing to Imprint by doing 3
-          tasks:
+          your email address. The email address provided will primarily be usedfor communication. 
+          Once that&apos;s finished, you can start contributing to Imprint by doing these three tasks:
         </P>
       </div>
       <div ref={ref}>
@@ -88,7 +85,7 @@ export default function Help() {
               <span>Add Labels</span>{" "}
             </H3>
             <P>
-              Label additional sidewalk obstructions that we might have missed!
+              Label additional sidewalk obstructions that the initial model might have missed.
             </P>
           </li>
           <li
