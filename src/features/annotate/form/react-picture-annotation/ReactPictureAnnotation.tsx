@@ -517,7 +517,7 @@ export default class ReactPictureAnnotation extends React.Component<IReactPictur
 
           <div className="flex justify-center my-12">
             <button
-              className="annotation-submit-btn border duration-100 transition-all ease-in-out shadow-lg hover:shadow-sm"
+              className="annotation-submit-btn bg-primary text-white border border-primary duration-100 transition-all ease-in-out shadow-lg hover:shadow-sm hover:bg-opacity-90"
               type="submit"
               onClick={this.submit}
             >

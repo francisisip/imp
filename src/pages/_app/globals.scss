@@ -377,16 +377,16 @@
 }
 
 .annotation-submit-btn {
-  background-color: var(--c-accent);
+  background-color: var(--c-primary);
   padding: 10px 20px;
   border-radius: 5px;
   font-size: 1.2rem;
   transition: all 0.3s;
-  color: #02361e;
-  border-color: #0aa05a;
+  color: #fff;
+  border-color: var(--c-primary);
   &:hover {
     color: white;
-    background-color: #0aa05a;
+    background-color: var(--c-primary);
   }
 }
 

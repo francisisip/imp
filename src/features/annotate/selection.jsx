@@ -47,7 +47,7 @@ export default function AnnotationSessionSelection({ username }) {
           <div className="flex flex-wrap justify-center">
             <div className="px-4 mt-4">
               <button
-                className="bg-red-600 text-white py-5 px-5 transition-all duration-300 ease-in-out rounded-md border-black hover:text-white hover:bg-gray-800 text-5xl shadow-lg"
+                className="bg-primary text-white py-5 px-5 transition-all duration-300 ease-in-out rounded-md border-black hover:text-white hover:bg-gray-800 text-5xl shadow-lg"
                 onClick={() => setAnnotationSession(10)}
               >
                 10
@@ -55,7 +55,7 @@ export default function AnnotationSessionSelection({ username }) {
             </div>
             <div className="px-4 mt-4">
               <button
-                className="bg-red-600 text-white py-5 px-5 transition-all duration-300 ease-in-out rounded-md border-black hover:text-white hover:bg-gray-800 text-5xl shadow-lg"
+                className="bg-primary text-white py-5 px-5 transition-all duration-300 ease-in-out rounded-md border-black hover:text-white hover:bg-gray-800 text-5xl shadow-lg"
                 onClick={() => setAnnotationSession(20)}
               >
                 20
@@ -63,7 +63,7 @@ export default function AnnotationSessionSelection({ username }) {
             </div>
             <div className="px-4 mt-4">
               <button
-                className="bg-red-600 text-white py-5 px-5 transition-all duration-300 ease-in-out rounded-md border-black hover:text-white hover:bg-gray-800 text-5xl shadow-lg"
+                className="bg-primary text-white py-5 px-5 transition-all duration-300 ease-in-out rounded-md border-black hover:text-white hover:bg-gray-800 text-5xl shadow-lg"
                 onClick={() => setAnnotationSession(30)}
               >
                 30
@@ -71,7 +71,7 @@ export default function AnnotationSessionSelection({ username }) {
             </div>
             <div className="px-4 mt-4">
               <button
-                className="bg-red-600 text-white py-5 px-5 transition-all duration-300 ease-in-out rounded-md border-black hover:text-white hover:bg-gray-800 text-5xl shadow-lg"
+                className="bg-primary text-white py-5 px-5 transition-all duration-300 ease-in-out rounded-md border-black hover:text-white hover:bg-gray-800 text-5xl shadow-lg"
                 onClick={() => setAnnotationSession(50)}
               >
                 50
