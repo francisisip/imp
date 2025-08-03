@@ -1,5 +1,6 @@
 import Page from '@/ui/page';
 import H1 from 'ui/heading/h1';
+import Link from 'next/link';
 // import H2 from 'ui/heading/h2';
 import H3 from 'ui/heading/h3';
 import P from 'ui/heading/p';
@@ -15,7 +16,9 @@ export default function Index() {
                 <div className='mx-16'>
                     <H1>Terms of Use and Privacy Policy </H1>
                     <br />
-                    <P className="text-xl mb-2">This terms of use and privacy policy will help you understand how Human-X Interaction Lab and student researchers will use and
+                    <P className="text-xl mb-2">This terms of use and privacy policy will help you understand how 
+                        <Link href="https://dlsucomet.github.io/" target="_blank" className="text-primary hover:underline"> Human-X Interaction Lab </Link>
+                       and student researchers will use and
                         protect the data you provide to us when you visit and use Imprint. </P>
                     <br />
                     <H3 className="mb-2"> Overview</H3>

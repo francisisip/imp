@@ -68,7 +68,7 @@ export default function Footer() {
               <p className="text-white">
                 {/* &copy;
                 {' '} */}
-                <Link passHref href="https://github.com/dlsudatasci/imprint"> 
+                <Link passHref href="https://dlsucomet.github.io/" target="_blank"> 
                     <HXIL height={50} white />
                 </Link>
               </p>
