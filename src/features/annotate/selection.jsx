@@ -2,20 +2,14 @@ import { useRouter } from "next/router";
 
 import H2 from "ui/heading/h2";
 
-export default function AnnotationSessionSelection({ username }) {
+export default function AnnotationSessionSelection() {
   const router = useRouter();
 
   const setAnnotationSession = async (annotationTotalCount) => {
-    
-    const requestBody = {
-      annotationTotalCount,
-      username
-    };
-
     const annotationResponse = await fetch("/api/annotationGet", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
-      body: JSON.stringify(requestBody),
+      body: JSON.stringify(annotationTotalCount),
     });
     const annotationJson = await annotationResponse.json();
     window.localStorage.setItem(
