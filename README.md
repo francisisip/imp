@@ -2,29 +2,28 @@
 
 Imprint is a human-in-the-loop crowdsourcing application for data collection and continuous integration with machine learning model training.
 
-💡 Current Use Case
+### 💡 Current Use Case
 > Crowd-powered labeling of sidewalk obstructions and walkability for sidewalk obstruction detection research.
 
-🔧 Features
+### 🔧 Features
 - Interactive image annotation interface
 - Real-time data dashboard with annotation history
 
-🔍 Project Goals
+### 🔍 Project Goals
 - Build a general-purpose platform for human-in-the-loop annotation tasks.
 - Improve voluntary crowdsourcing by encouraging crowdworkers to contribute in the development of ML models.
 - Support scalable data collection for training, validation, and testing of AI systems.
 
-📦 Local Installation
-```
-1. 
+### 📦 Local Installation
+1. Clone the repository
+2. Pull Docker Image from _{insert link here}_
+3. Run command on terminal ```docker run -p 3000:3000 -v ${PWD}:/app -v /app/node_modules --env-file .env imprint:1.0```
 
-```
-
-🚀 Roadmap
+### 🚀 Roadmap
 - [ ] Develop and deploy base and modified version of Imprint for mini-HCI study.
-    - [x] Create new database and upload sidewalk data
-    - [x] Modify registration to include frequently walked cities of users
-    - [x] Implement new city-based algorithm for modified version
+    - [x] ~~Create new database and upload sidewalk data~~
+    - [x] ~~Modify registration to include frequently walked cities of users~~
+    - [x] ~~Implement new city-based algorithm for modified version~~
     - [ ] Implement visualization after successful annotation for modified version
     - [ ] Add feedback/popups after successful annotation for modified version 
     - [ ] Reframe prompt on asking users to continue annotation session
