@@ -40,7 +40,7 @@ export default function login({ providers, csrfToken }) {
     >
       <section className="container mx-auto p-4 my-12 mb-32 bg-white flex flex-col items-center justify-center">
         <div className="w-10/12 sm:w-8/12 md:w-6/12 lg:w-5/12 xl:w-4/12 mb-4">
-          <H1>Login to mprint!</H1>
+          <H1>Login to Imprint!</H1>
           <p className="mt-5">
             Don&apos;t have an account?
             <Link href="/register">

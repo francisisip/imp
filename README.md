@@ -14,6 +14,12 @@ Imprint is a human-in-the-loop crowdsourcing application for data collection and
 - Improve voluntary crowdsourcing by encouraging crowdworkers to contribute in the development of ML models.
 - Support scalable data collection for training, validation, and testing of AI systems.
 
+📦 Local Installation
+```
+1. 
+
+```
+
 🚀 Roadmap
 - [ ] Develop and deploy base and modified version of Imprint for mini-HCI study.
     - [x] Create new database and upload sidewalk data
