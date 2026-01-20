@@ -16,8 +16,7 @@ export default function Footer() {
               Thank you for joining us in knowing our streets better.
             </h4>
             <p className="text-gray-400">
-              Feel free to send us a message, view our repository, or read our
-              paper.
+              Feel free to send us a message or view our repository.
             </p>
             <div className="flex flex-wrap">
               <a

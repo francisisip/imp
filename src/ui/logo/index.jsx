@@ -4,7 +4,7 @@ export default function Logo({ subTitle, white }) {
   return (
     <div style={{ display: 'flex', alignItems: 'center' }}>
       <img
-        src="/images/logo/logo.jpeg"
+        src="/images/logo/imp.png"
         alt="Logo"
         style={{
           height: `${logoHeight}px`,
@@ -19,16 +19,13 @@ export default function Logo({ subTitle, white }) {
           justifyContent: 'center',
         }}
       >
-        <h1
-          style={{
-            fontSize: `20px`, 
-            lineHeight: 1,
-            margin: 0,
-            color: white ? 'white' : '#1F2937',
-          }}
+        {/* <h1
+          className={`text-[20px] leading-none m-0 font-bold ${
+            white ? 'text-white' : 'text-primary'
+          }`}
         >
           Imprint
-        </h1>
+        </h1> */}
         <em
           className="text-gray-500"
           style={{

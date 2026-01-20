@@ -38,13 +38,13 @@ export default function login({ providers, csrfToken }) {
       description="Login to Imprint! Login to Imprint in order to contribute to our platform."
       contribute={false}
     >
-      <section className="container mx-auto p-4 my-12 mb-32 bg-white flex flex-col items-center justify-center">
+      <section className="container mx-auto p-4 my-12 mb-32 bg-[#F8F7F9] flex flex-col items-center justify-center">
         <div className="w-10/12 sm:w-8/12 md:w-6/12 lg:w-5/12 xl:w-4/12 mb-4">
           <H1>Login to Imprint!</H1>
           <p className="mt-5">
             Don&apos;t have an account?
             <Link href="/register">
-              <span className="text-sm ml-2 font-bold text-teal-500 hover:underline cursor-pointer">
+              <span className="text-sm ml-2 font-bold text-primary hover:underline cursor-pointer">
                 Register Here
               </span>
             </Link>
@@ -53,13 +53,13 @@ export default function login({ providers, csrfToken }) {
         <div className="w-10/12 sm:w-8/12 md:w-6/12 lg:w-5/12 xl:w-4/12 mb-6">
           <form onSubmit={onSubmit}>
             <input
-              className="mb-4 p-2 appearance-none block w-full bg-gray-200 placeholder-gray-900 rounded border focus:border-teal-500"
+              className="mb-4 p-2 appearance-none block w-full bg-gray-100 placeholder-gray-900 rounded border focus:border-primary"
               type="text"
               placeholder="Username"
               name="username"
             />
             <input
-              className="mb-4 p-2 appearance-none block w-full bg-gray-200 placeholder-gray-900 rounded border focus:border-teal-500"
+              className="mb-4 p-2 appearance-none block w-full bg-gray-100 placeholder-gray-900 rounded border focus:border-primary"
               type="password"
               placeholder="Password"
               name="password"
@@ -83,7 +83,7 @@ export default function login({ providers, csrfToken }) {
         <div className="flex justify-center w-10/12 sm:w-8/12 md:w-6/12 lg:w-5/12 xl:w-4/12">
           <p className="font-semibold text-gray-600 text-sm">
             If you&apos;re experiencing problems logging in to your account
-            please contact us at: sidewalk.thesis@gmail.com
+            please contact me at: francis_bawa@dlsu.edu.ph
           </p>
         </div>
       </section>

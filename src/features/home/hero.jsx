@@ -17,10 +17,10 @@ export default function Hero() {
   return (
     <section className="container flex flex-col mx-auto items-center md:flex-row justify-center py-10 md:p-5 px-5">
       <div className="flex flex-col mx-auto justify-center max-w-md md:max-w-2xl md:mr-12">
-        <H1>Welcome to Imprint</H1>
+        <H1>Welcome to <span className="font-bold text-primary">Imprint</span></H1>
         <div className="mt-4">
           <P>
-            We aim to accelerate machine learning development through voluntary crowdsourcing in a human-in-the-loop system.
+            We aim to accelerate crowdsourced streetscape data collection to understand how people perceive accessibility, safety, and walkability in urban environments.
           </P>
         </div>
         <div className="mt-5 flex">

@@ -9,7 +9,7 @@ export default function HelpItem({ children, heading }) {
     <article className="border-b">
       <div className="border-l-2 border-transparent">
         <button type="button" onClick={() => { setOpen(!open); }} className="transition-all ease-in-out flex w-full active:outline-none focus:outline-none justify-between items-center p-5 pl-8 pr-8 cursor-pointer select-none relative z-10">
-          <h2 className="text-gray-800 text-left font-thin text-xl">
+          <h2 className="text-black text-left font-thin text-xl">
             {heading}
           </h2>
           <div className={`rounded-full border border-black w-7 h-7 flex items-center justify-center transform transition-transform ease-in-out bg-black ${open ? 'rotate-180' : ''}`}>

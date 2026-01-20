@@ -21,15 +21,10 @@ export default function Index() {
                        and student researchers will use and
                         protect the data you provide to us when you visit and use Imprint. </P>
                     <br />
-                    <H3 className="mb-2"> Overview</H3>
-                    <P> Greetings! I am Francis Bawa and I'm currently working on my Master's thesis at De La Salle University titled &quot;Advancing Urban Planning Through Sidwalk 
-                        Obstruction Detection Near Key Transit Areas with Human-in-the-Loop Object Detection and Recognition&quot;. In this study, I'm trying to implement a sidewalk
-                        obstruction detection tool purely from the help of volunteers like you by using this human-in-the-loop system. Currently, I'm still trying to finalize the overall
-                        look and feel of the website as well as work on the integration of the annotated data in machine learning models.</P>
-                    <br />
-                    <P> My current focus is a mini-HCI study titled &quot;Enhancing Urban Crowdsourcing through Motivational Designs.&quot; This project explores how to effectively motivate users to contribute data voluntarily and meaningfully to support machine learning development.
-                        At this stage, I are currently looking for volunteers to help annotate images of sidewalks by labeling obstructions, which will be used to re-train a computer vision model to automatically detect these obstacles in the future. To ensure successful model retraining, imprint will need a large volume of labeled data.
-                        Your participation will directly support research on urban accessibility and the advancement of human-in-the-loop AI systems.</P>
+                    <H3 className="mb-2"> Overview</H3> 
+                    <P> Greetings! I am Francis Bawa and I'm currently working on my Master's thesis at De La Salle University titled &quot;Leveraging Human-in-the-Loop Crowdsourcing to 
+                        Support Richer Human Perception Data Collection in Streetscape Evaluation&quot;. In this study, I'm trying to ....</P>
+                    
                     <br />
                     <H3 className="mb-2"> Procedure</H3>
                     <P> Register to Imprint through the &quot;Contribute&quot; Page, and provide the following:</P>

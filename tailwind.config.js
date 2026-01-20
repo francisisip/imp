@@ -1,17 +1,20 @@
+/** @type {import('tailwindcss').Config} */
+const defaultTheme = require('tailwindcss/defaultTheme'); // <--- This line was likely missing!
+
 module.exports = {
-  mode: "jit",
-  purge: ["./src/**/*.{js,jsx,ts,tsx}"],
-  darkMode: false, // or 'media' or 'class'
+  content: [
+    "./src/**/*.{js,jsx,ts,tsx}",
+  ],
   theme: {
     extend: {
+      fontFamily: {
+        sans: ['var(--font-inter)', ...defaultTheme.fontFamily.sans],
+      },
       colors: {
-        primary: "#5c710eff",
+        primary: "#5b2333",
         accent: "#726f76",
       },
     },
-  },
-  variants: {
-    extend: {},
   },
   plugins: [],
 };

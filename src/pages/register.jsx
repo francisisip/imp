@@ -36,7 +36,7 @@ export default function register({ providers, csrfToken }) {
   const customSelectStyles = {
     control: (provided, state) => ({
       ...provided,
-      backgroundColor: "#e5e7eb",
+      backgroundColor: "#f3f4f6",
       borderRadius: "0.25rem",
       borderWidth: "2px",
       borderStyle: "solid",
@@ -142,13 +142,13 @@ export default function register({ providers, csrfToken }) {
       description="Register to Imprint! Register to Imprint in order to contribute to our platform."
       contribute={false}
     >
-      <section className="container mx-auto p-4 my-12 mb-32 bg-white flex flex-col items-center justify-center">
+      <section className="container mx-auto p-4 my-12 mb-32 bg-[#F8F7F9] flex flex-col items-center justify-center">
         <div className="w-10/12 sm:w-8/12 md:w-6/12 lg:w-5/12 xl:w-5/12 mb-4">
           <H1>Register to Imprint!</H1>
           <p className="mt-5">
             Already have an account?
             <Link href="/login">
-              <span className="text-sm ml-2 font-bold text-teal-500 hover:underline cursor-pointer">
+              <span className="text-sm ml-2 font-bold text-primary hover:underline cursor-pointer">
                 Login Here
               </span>
             </Link>
@@ -163,7 +163,7 @@ export default function register({ providers, csrfToken }) {
             Username
           </label>
           <input
-            className="mb-4 p-2 appearance-none block w-full bg-gray-200 placeholder-gray-400 rounded border focus:border-teal-500"
+            className="mb-4 p-2 appearance-none block w-full bg-gray-100 placeholder-gray-400 rounded border focus:border-primary"
             type="text"
             placeholder="Username"
             name="username"
@@ -180,7 +180,7 @@ export default function register({ providers, csrfToken }) {
             Email
           </label>
           <input
-            className="mb-4 p-2 appearance-none block w-full bg-gray-200 placeholder-gray-400 rounded border focus:border-teal-500"
+            className="mb-4 p-2 appearance-none block w-full bg-gray-100 placeholder-gray-400 rounded border focus:border-primary"
             type="email"
             placeholder="hello@website.com"
             name="email"
@@ -197,7 +197,7 @@ export default function register({ providers, csrfToken }) {
             Password
           </label>
           <input
-            className="mb-4 p-2 appearance-none block w-full bg-gray-200 placeholder-gray-400 rounded border focus:border-teal-500"
+            className="mb-4 p-2 appearance-none block w-full bg-gray-100 placeholder-gray-400 rounded border focus:border-primary"
             type="password"
             placeholder="Password"
             name="password"
@@ -208,7 +208,7 @@ export default function register({ providers, csrfToken }) {
           </label>
 
           <input
-            className="mb-4 p-2 appearance-none block w-full bg-gray-200 placeholder-gray-400 rounded border focus:border-teal-500"
+            className="mb-4 p-2 appearance-none block w-full bg-gray-100 placeholder-gray-400 rounded border focus:border-primary"
             type="password"
             placeholder="Confirm Password"
             name="confirmPassword"
@@ -227,7 +227,7 @@ export default function register({ providers, csrfToken }) {
             City of Residence
           </label>
           <input
-            className="mb-4 p-2 appearance-none block w-full bg-gray-200 placeholder-gray-400 rounded border focus:border-teal-500"
+            className="mb-4 p-2 appearance-none block w-full bg-gray-100 placeholder-gray-400 rounded border focus:border-primary"
             type="text"
             placeholder="City of Residence"
             name="city"
@@ -248,7 +248,7 @@ export default function register({ providers, csrfToken }) {
             Age
           </label>
           <input
-            className="mb-4 p-2 appearance-none block w-full bg-gray-200 placeholder-gray-400 rounded border focus:border-teal-500"
+            className="mb-4 p-2 appearance-none block w-full bg-gray-100 placeholder-gray-400 rounded border focus:border-primary"
             type="number"
             placeholder="Age"
             name="age"
@@ -312,7 +312,7 @@ export default function register({ providers, csrfToken }) {
             Referred by
           </label>
           <input
-            className="mb-4 p-2 appearance-none block w-full bg-gray-200 placeholder-gray-400 rounded border focus:border-teal-500"
+            className="mb-4 p-2 appearance-none block w-full bg-gray-100 placeholder-gray-400 rounded border focus:border-primary"
             type="text"
             placeholder="Referred by"
             name="referred"
@@ -323,7 +323,7 @@ export default function register({ providers, csrfToken }) {
             entity.
           </div>
 
-          <div className="flex items-center">
+          <div className="flex items-center mt-6 ">
             <div className="w-2/3 flex items-center">
               <input
                 id="remember-me"

@@ -10,7 +10,7 @@ export default function DemoPage() {
             contribute={false}
         >
             <section className="container mx-auto px-5">
-                <H1>Imprint Annotation Guide</H1>
+                <H1><span className="font-bold text-primary">Imprint</span> Annotation Guide</H1>
             </section>
             <HelpDirectory />
         </Page>

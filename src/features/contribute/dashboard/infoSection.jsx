@@ -76,12 +76,23 @@ export default class DashboardInfo extends React.Component {
               </P>
             </div>
           </div>
-          <div className="mt-10 md:-mt-12 px-5 h-96">
+          
+          {/* CHANGED: Added 'flex flex-col' so we can control the list height */}
+          <div className="mt-10 md:-mt-12 px-5 h-96 flex flex-col">
             <H3>Recent Activity</H3>
-            <ul className="pt-5">
-              {this.state.userActivity.map((activity, index) => {
-                return <ActivityItem activity={activity} key={index} />;
-              })}
+            
+            {/* CHANGED: Added 'flex-1' (fills space) and 'overflow-y-auto' (scrolls) */}
+            <ul className="mt-5 flex-1 overflow-y-auto pr-2">
+              {this.state.userActivity.length > 0 ? (
+                this.state.userActivity
+                  .slice(0) // 1. Make a copy
+                  .reverse() // 2. Reverse the copy
+                  .map((activity, index) => {
+                    return <ActivityItem activity={activity} key={index} />;
+                  })
+              ) : (
+                <P>No recent activity found.</P>
+              )}
             </ul>
           </div>
         </div>
