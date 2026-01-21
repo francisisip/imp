@@ -30,19 +30,25 @@ const handler = async (req, res) => {
     }
 
     try {
-      const result = await db.collection("annotations").insertOne({
-        date,
-        username,
-        imageID,
-        city,
-        accessibilityRating,
-        pavementType,
-        selectedObjectsID,
-        newObjects,
-      });
+      // CHANGED: Use updateOne with upsert: true instead of insertOne
+      // This ensures that if the user annotates the same image twice, it updates the old one.
+      const result = await db.collection("annotations").updateOne(
+        { imageID: imageID, username: username }, // Search Criteria
+        {
+          $set: {
+            date, // Updates the timestamp
+            city,
+            accessibilityRating,
+            pavementType,
+            selectedObjectsID,
+            newObjects,
+          },
+        },
+        { upsert: true } // Create if it doesn't exist
+      );
 
       console.log(
-        `User: ${username} submitted annotation for ImageID: ${imageID}`
+        `User: ${username} submitted/updated annotation for ImageID: ${imageID}`
       );
       
       return res.status(200).json({ message: "Annotation submitted successfully." });

@@ -515,9 +515,22 @@ export default class ReactPictureAnnotation extends React.Component<IReactPictur
             </p>
           </div>
 
-          <div className="flex justify-center my-12">
+          <div className="flex justify-center my-12 gap-4"> {/* Added gap-4 for spacing */}
+            
+            {/* --- NEW PREVIOUS BUTTON --- */}
+            {this.props.currentAnnotationCount > 1 && (
+              <button
+                className="annotation-prev-btn bg-primary text-white border border-accent duration-100 transition-all ease-in-out shadow-lg hover:shadow-sm hover:bg-opacity-90 px-6 py-2" // Added padding for consistency
+                type="button"
+                onClick={this.onPrevious}
+              >
+                Previous
+              </button>
+            )}
+
+            {/* Existing Submit Button */}
             <button
-              className="annotation-submit-btn bg-primary text-white border border-primary duration-100 transition-all ease-in-out shadow-lg hover:shadow-sm hover:bg-opacity-90"
+              className="annotation-submit-btn bg-primary text-white border border-primary duration-100 transition-all ease-in-out shadow-lg hover:shadow-sm hover:bg-opacity-90 px-6 py-2" // Added padding for consistency
               type="submit"
               onClick={this.submit}
             >
@@ -528,6 +541,21 @@ export default class ReactPictureAnnotation extends React.Component<IReactPictur
       </section>
     );
   }
+
+  private onPrevious = () => {
+    // 1. Check if we are at the start
+    if (this.props.currentAnnotationCount <= 1) return;
+
+    // 2. Decrement the counter in Local Storage
+    const currentCount = parseInt(localStorage.getItem("annotationCurrentCount") || "1");
+    window.localStorage.setItem(
+      "annotationCurrentCount",
+      JSON.stringify(currentCount - 1)
+    );
+
+    // 3. Reload to fetch the previous image
+    Router.reload();
+  };
 
   private submit = async () => {
     // isLoading(true);

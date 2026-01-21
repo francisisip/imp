@@ -394,6 +394,20 @@ body {
   }
 }
 
+.annotation-prev-btn {
+  background-color: var(--c-accent);
+  padding: 10px 20px;
+  border-radius: 5px;
+  font-size: 1.2rem;
+  transition: all 0.3s;
+  color: #fff;
+  border-color: var(--c-accent);
+  &:hover {
+    color: white;
+    background-color: var(--c-accent);
+  }
+}
+
 .gifContainer{
   width: 80vw;
   max-width: 60rem;
