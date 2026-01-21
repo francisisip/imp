@@ -1,10 +1,7 @@
 import { MongoClient } from "mongodb";
 
-let uri = process.env.MONGODB_URI;
-let dbName = process.env.MONGODB_DB;
-
-let cachedClient = null;
-let cachedDb = null;
+const uri = process.env.MONGODB_URI;
+const dbName = process.env.MONGODB_DB;
 
 if (!uri) {
   throw new Error(
@@ -18,20 +15,38 @@ if (!dbName) {
   );
 }
 
+// Global variable to cache the client in development mode
+// This prevents creating too many connections during hot-reloading
+let cachedClient = global.mongoClient;
+let cachedDb = global.mongoDb;
+
+if (!cachedClient) {
+  cachedClient = null;
+  cachedDb = null;
+}
+
 export async function connectToDatabase() {
+  // If we have a cached connection, use it
   if (cachedClient && cachedDb) {
     return { client: cachedClient, db: cachedDb };
   }
 
-  const client = await MongoClient.connect(uri, {
-    useNewUrlParser: true,
-    useUnifiedTopology: true,
-  });
+  // --- UPDATED FOR DRIVER v6 ---
+  // 1. Removed deprecated options (useNewUrlParser, useUnifiedTopology)
+  // 2. Direct instantiation
+  const client = new MongoClient(uri);
 
-  const db = await client.db(dbName);
+  await client.connect();
+  const db = client.db(dbName);
 
   cachedClient = client;
   cachedDb = db;
+
+  // Cache in global scope for Next.js development mode
+  if (process.env.NODE_ENV === "development") {
+    global.mongoClient = client;
+    global.mongoDb = db;
+  }
 
   return { client, db };
 }

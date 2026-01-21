@@ -544,6 +544,13 @@ export default class ReactPictureAnnotation extends React.Component<IReactPictur
       (element) => element.editable
     );
 
+    for (const object of newObjects) {
+      if (!object.comment || object.comment === "---") {
+        alert("You have an unlabeled obstruction. Please select a label for all the boxes you drew.");
+        return; // Stop the submission here
+      }
+    }
+
     if (this.state.pavementType === "") {
       alert("Please select the surface type of the sidewalk.");
       return;

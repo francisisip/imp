@@ -1,4 +1,21 @@
+import React, { useState, useEffect } from "react";
 import DeleteButton from "./DeleteButton";
+
+const OBSTRUCTION_OPTIONS = [
+  { value: "bench", label: "Bench" },
+  { value: "car", label: "Car" },
+  { value: "construction_materials", label: "Construction Materials" },
+  { value: "cracked_pavement", label: "Cracked Pavement" },
+  { value: "garbage", label: "Garbage" },
+  { value: "lamp_post", label: "Lamp Post" },
+  { value: "motorcycle", label: "Motorcycle" },
+  { value: "potted_plant", label: "Potted Plant" },
+  { value: "street_sign", label: "Street Sign" },
+  { value: "street_vendor_cart", label: "Street Vendor Cart" },
+  { value: "tree", label: "Tree" },
+  { value: "tricycle", label: "Tricycle" },
+  { value: "utility_post", label: "Utility Post" },
+];
 
 export interface IDefaultInputSection {
   value: string;
@@ -19,127 +36,154 @@ const DefaultInputSection = ({
   onUnselectObstruction,
   editable,
   selected,
-}: IDefaultInputSection) => (
-  <>
-    {editable ? (
-      <div className="rp-default-input-section">
-        <select
-          name="cars"
-          id="cars"
-          className="rp-default-input-section_input"
-          value={value || "---"}
-          onChange={(e) => onChange(e.target.value)}
-        >
-          <option value="---" disabled>
-            Select your option
-          </option>
-          <option value="bench">Bench</option>
-          <option value="car">Car</option>
-          <option value="construction_materials">Construction Materials</option>
-          <option value="cracked_pavement">Cracked Pavement</option>
-          <option value="garbage">Garbage</option>
-          <option value="lamp_post">Lamp Post</option>
-          <option value="motorcycle">Motorcycle</option>
-          <option value="potted_plant">Potted Plant</option>
-          <option value="street_sign">Street Sign</option>
-          <option value="street_vendor_cart">Street Vendor Cart</option>
-          <option value="tree">Tree</option>
-          <option value="tricycle">Tricycle</option>
-          <option value="utility_post">Utility Post</option>
-        </select>
-        <a
-          className="rp-default-input-section_select yes"
-          onClick={() => onSelectObstruction()}
-        >
-          ✓
-        </a>
-        <a
-          className="rp-default-input-section_delete"
-          onClick={() => onDelete()}
-        >
-          <DeleteButton />
-        </a>
-      </div>
-    ) : (
-      <div className="rp-default-select-section">
-        {selected ? (
-          <>
-            <p>You selected {translateValue(value)} as an obstruction.</p>
-            <div>
-              <a
-                className={
-                  selected
-                    ? "rp-default-input-section_select no"
-                    : "rp-default-input-section_select no"
-                }
-                onClick={() => onUnselectObstruction()}
-              >
-                Remove
-              </a>
-            </div>
-          </>
-        ) : (
-          <>
-            <p>Is {translateValue(value)} an obstruction?</p>
-            <div>
-              <a
-                className={
-                  selected
-                    ? "rp-default-input-section_select yes"
-                    : "rp-default-input-section_select yes"
-                }
-                onClick={() => onSelectObstruction()}
-              >
-                {/* <DeleteButton /> */}
-                Yes
-              </a>
-              <a
-                className={
-                  selected
-                    ? "rp-default-input-section_select no"
-                    : "rp-default-input-section_select no"
-                }
-                onClick={() => onUnselectObstruction()}
-              >
-                No
-              </a>
-            </div>
-          </>
-        )}
-      </div>
-    )}
-  </>
-);
+}: IDefaultInputSection) => {
+  const [isCustom, setIsCustom] = useState(false);
 
-const translateValue = (value) => {
-  switch (value) {
-    case "bench":
-      return "Bench";
-    case "car":
-      return "Car";
-    case "construction_materials":
-      return "Construction Materials";
-    case "cracked_pavement":
-      return "Cracked Pavement";
-    case "garbage":
-      return "Garbage";
-    case "lamp_post":
-      return "Lamp Post";
-    case "motorcycle":
-      return "Motorcycle";
-    case "potted_plant":
-      return "Potted Plant";
-    case "street_sign":
-      return "Street Sign";
-    case "street_vendor_cart":
-      return "Street Vendor Cart";
-    case "tree":
-      return "Tree";
-    case "tricycle":
-      return "Tricycle";
-    case "utility_post":
-      return "Utility Post";
-  }
+  // Auto-detect if value is custom (not in list) to show input mode automatically
+  useEffect(() => {
+    const isStandard = OBSTRUCTION_OPTIONS.some((opt) => opt.value === value);
+    if (!isStandard && value && value !== "---") {
+      setIsCustom(true);
+    } else {
+      setIsCustom(false);
+    }
+  }, [value]);
+
+  const handleSelectChange = (e: React.ChangeEvent<HTMLSelectElement>) => {
+    const selectedVal = e.target.value;
+    if (selectedVal === "OTHER_CUSTOM") {
+      setIsCustom(true);
+      onChange(""); // Clear value so user can type fresh
+    } else {
+      onChange(selectedVal);
+    }
+  };
+
+  const handleCancelCustom = () => {
+    setIsCustom(false);
+    onChange("---"); // Reset to default
+  };
+
+  return (
+    <>
+      {editable ? (
+        <div className="rp-default-input-section">
+          
+          {/* --- TERNARY OPERATOR: SWAP SELECT FOR INPUT --- */}
+          {isCustom ? (
+            // 1. CUSTOM INPUT MODE
+            <>
+              <input
+                autoFocus
+                className="rp-default-input-section_input"
+                placeholder="Type label name..."
+                value={value === "---" ? "" : value}
+                onChange={(e) => onChange(e.target.value)}
+                style={{ 
+                  flexGrow: 1, 
+                  color: "black",        // <--- FIXED: Black Text
+                  backgroundColor: "white", // <--- FIXED: White Background for contrast
+                  border: "1px solid #ccc",
+                  borderRadius: "4px",
+                  padding: "0 8px"
+                }} 
+              />
+              {/* "Back" Button to return to Dropdown */}
+              <a 
+                onClick={handleCancelCustom}
+                title="Cancel custom label"
+                style={{ 
+                  fontWeight: "bold", 
+                  fontSize: "14px", 
+                  padding: "0 10px",
+                  cursor: "pointer",
+                  color: "white" 
+                }}
+              >
+                ✕
+              </a>
+            </>
+          ) : (
+            // 2. DROPDOWN MODE
+            <select
+              className="rp-default-input-section_input"
+              value={value || "---"}
+              onChange={handleSelectChange}
+              style={{ flexGrow: 1 }}
+            >
+              <option value="---" disabled>
+                Select your option
+              </option>
+              {OBSTRUCTION_OPTIONS.map((opt) => (
+                <option key={opt.value} value={opt.value}>
+                  {opt.label}
+                </option>
+              ))}
+              <option value="OTHER_CUSTOM" style={{ fontWeight: "bold" }}>
+                Other...
+              </option>
+            </select>
+          )}
+
+          {/* --- COMMON BUTTONS (Confirm & Delete) --- */}
+          <a
+            className="rp-default-input-section_select yes"
+            onClick={() => onSelectObstruction()}
+          >
+            ✓
+          </a>
+          <a
+            className="rp-default-input-section_delete"
+            onClick={() => onDelete()}
+          >
+            <DeleteButton />
+          </a>
+        </div>
+      ) : (
+        // --- READ ONLY MODE ---
+        <div className="rp-default-select-section">
+          {selected ? (
+            <>
+              <p>You selected {translateValue(value)} as an obstruction.</p>
+              <div>
+                <a
+                  className="rp-default-input-section_select no"
+                  onClick={() => onUnselectObstruction()}
+                >
+                  Remove
+                </a>
+              </div>
+            </>
+          ) : (
+            <>
+              <p>Is {translateValue(value)} an obstruction?</p>
+              <div>
+                <a
+                  className="rp-default-input-section_select yes"
+                  onClick={() => onSelectObstruction()}
+                >
+                  Yes
+                </a>
+                <a
+                  className="rp-default-input-section_select no"
+                  onClick={() => onUnselectObstruction()}
+                >
+                  No
+                </a>
+              </div>
+            </>
+          )}
+        </div>
+      )}
+    </>
+  );
+};
+
+const translateValue = (value: string) => {
+  const standard = OBSTRUCTION_OPTIONS.find((opt) => opt.value === value);
+  if (standard) return standard.label;
+  if (value && value !== "---") return value; 
+  return value;
 };
 
 export default DefaultInputSection;
