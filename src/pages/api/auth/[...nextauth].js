@@ -4,7 +4,7 @@ import CredentialsProvider from "next-auth/providers/credentials";
 import bcrypt from "bcryptjs";
 import { connectToDatabase } from "@/util/mongodb";
 
-const options = {
+export const authOptions = {
   providers: [
     CredentialsProvider({
       // The name to display on the sign in form (e.g. 'Sign in with...')
@@ -68,4 +68,4 @@ const options = {
   },
 };
 
-export default (req, res) => NextAuth(req, res, options);
+export default (req, res) => NextAuth(req, res, authOptions);

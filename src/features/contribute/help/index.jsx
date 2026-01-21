@@ -3,7 +3,7 @@ import HelpItem from "./helpItem";
 
 export default function HelpDirectory() {
   return (
-    <section className="container mx-auto my-12 max-w-screen-xl overflow-hidden px-4">
+    <section className="container mx-auto my-12 max-w-screen-xl px-4 py-1">
       <HelpItem heading="Starting a new Annotation Session">
         <div className="flex flex-col">
           <div className="gifContainer border-black border-4 self-center">

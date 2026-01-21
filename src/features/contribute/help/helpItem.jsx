@@ -6,7 +6,7 @@ export default function HelpItem({ children, heading }) {
   const [open, setOpen] = useState(false);
 
   return (
-    <article className="border-b">
+    <article className="border border-gray-300 rounded-lg mb-4 shadow-sm bg-white overflow-hidden">
       <div className="border-l-2 border-transparent">
         <button type="button" onClick={() => { setOpen(!open); }} className="transition-all ease-in-out flex w-full active:outline-none focus:outline-none justify-between items-center p-5 pl-8 pr-8 cursor-pointer select-none relative z-10">
           <h2 className="text-black text-left font-thin text-xl">

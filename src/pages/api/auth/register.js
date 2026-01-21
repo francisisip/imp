@@ -6,7 +6,6 @@ const handler = async (req, res) => {
     console.log("Posting Registration");
     const { db } = await connectToDatabase();
 
-    // Required fields are done on the front end
     const {
       username,
       password,
@@ -18,44 +17,80 @@ const handler = async (req, res) => {
       referred,
     } = req.body;
 
+    // --- SECURITY FIX: SERVER-SIDE VALIDATION ---
+    
+    // 1. Check for missing required fields
+    if (!username || !password || !email || !city) {
+      return res.status(422).json({ message: "Missing required fields." });
+    }
+
+    // 2. Validate Email Format (Basic Regex)
+    if (!email.includes("@") || !email.includes(".")) {
+      return res.status(422).json({ message: "Invalid email address." });
+    }
+
+    // 3. Validate Password Strength
+    if (password.length < 6) {
+      return res.status(422).json({ 
+        message: "Password must be at least 6 characters long." 
+      });
+    }
+
+    // 4. Validate Username Length (Prevent database spam)
+    if (username.length > 50) {
+      return res.status(422).json({ message: "Username is too long." });
+    }
+
+    // --------------------------------------------
+
     const hashedPassword = await bcrypt.hash(password, 10);
 
+    // Check for duplicates
+    // Note: Using countDocuments is good, but adding a unique index in MongoDB is even safer.
     if ((await db.collection("users").countDocuments({ email })) > 0) {
       console.log("Duplicate email in registration");
-      res.status(400).send({ message: "The email has already been used." });
-    } else if (
-      (await db.collection("users").countDocuments({ username })) > 0
-    ) {
+      return res.status(409).send({ message: "The email has already been used." }); // Changed status to 409 (Conflict)
+    } 
+    
+    if ((await db.collection("users").countDocuments({ username })) > 0) {
       console.log("Duplicate username in registration");
-      res.status(403).send({ message: "The username has already been used." });
-    } else {
-      console.log("Creating new user in db");
-      const dateRegistered = new Date();
-      const totalAnnotations = 0;
-      const activities = [
-        {
-          activity: "Registered to Imprint",
-          date: dateRegistered,
-          tag: "register",
-        },
-      ];
-      await db
-        .collection("users")
-        .insertOne({
-          username,
-          hashedPassword,
-          email,
-          city,
-          frequentlyWalkedCities,
-          age,
-          commuteFrequency,
-          activities,
-          totalAnnotations,
-          referred,
-        })
-        .then(({ ops }) => ops[0]);
-      res.status(201).send("Done");
+      return res.status(409).send({ message: "The username has already been used." });
     }
+
+    console.log("Creating new user in db");
+    const dateRegistered = new Date();
+    const totalAnnotations = 0;
+    const activities = [
+      {
+        activity: "Registered to Imprint",
+        date: dateRegistered,
+        tag: "register",
+      },
+    ];
+
+    try {
+      await db.collection("users").insertOne({
+        username,
+        hashedPassword,
+        email,
+        city,
+        frequentlyWalkedCities,
+        age,
+        commuteFrequency,
+        activities,
+        totalAnnotations,
+        referred,
+      });
+      
+      return res.status(201).send("Done");
+    } catch (error) {
+      console.error("Registration Error:", error);
+      return res.status(500).json({ message: "Internal Server Error" });
+    }
+  } else {
+    // Handle non-POST requests
+    res.setHeader("Allow", ["POST"]);
+    return res.status(405).json({ message: `Method ${req.method} Not Allowed` });
   }
 };
 
