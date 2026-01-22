@@ -11,8 +11,8 @@ module.exports = {
         sans: ['var(--font-inter)', ...defaultTheme.fontFamily.sans],
       },
       colors: {
-        primary: "#5b2333",
-        accent: "#726f76",
+        primary: "#004aad",
+        accent: "#1d1d1d",
       },
     },
   },

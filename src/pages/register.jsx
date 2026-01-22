@@ -344,7 +344,7 @@ export default function register({ providers, csrfToken }) {
               </label>
             </div>
             <button
-              className="ml-auto w-1/3 bg-gray-800 text-white p-2 rounded font-semibold hover:bg-gray-900"
+              className="ml-auto w-1/3 bg-[#1d1d1d] text-white p-2 rounded font-semibold hover:bg-gray-900"
               type="submit"
               disabled={loadingForm}
             >

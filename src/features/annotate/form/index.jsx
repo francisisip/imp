@@ -1,5 +1,7 @@
 import { ReactPictureAnnotation } from "./react-picture-annotation/index";
 import H1 from "ui/heading/h1";
+import OutlineButton from "@/ui/buttons/buttonOutline";
+import Link from "next/link";
 import { getSession, useSession } from "next-auth/react";
 
 export default function AnnotateForm({ data, current, total }) {
@@ -19,15 +21,6 @@ export default function AnnotateForm({ data, current, total }) {
           </span>
           <br /> Image #{current} / {total}
         </H1>
-        <div className="flex align-middle flex-col justify-center">
-          <a
-            href="/contribute/help"
-            target="_blank"
-            className="block h-12 w-72 text-center mt-16 mr-8 text-white bg-primary py-3 px-5 hover:bg-primary border rounded-md shadow-md hover:shadow-none"
-          >
-            Check out our Annotation Guide
-          </a>
-        </div>
       </div>
 
       <ReactPictureAnnotation

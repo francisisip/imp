@@ -7,7 +7,7 @@ import styles from "./styles.module.css";
 
 export default function Footer() {
   return (
-    <footer className="bg-gray-800 pt-6 md:pt-12 w-full relative z-10">
+    <footer className="bg-[#1d1d1d] pt-6 md:pt-12 w-full relative z-10">
       <div className="px-4 mx-auto">
         <div className="md:flex justify-center md:flex-wrap md:-mx-4 md:pb-6">
 

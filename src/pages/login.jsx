@@ -72,7 +72,7 @@ export default function login({ providers, csrfToken }) {
             <div className="flex items-center">
               <div className="w-2/3 flex items-center"></div>
               <button
-                className="ml-auto w-1/3 bg-gray-800 text-white p-2 rounded font-semibold hover:bg-gray-900"
+                className="ml-auto w-1/3 bg-[#1d1d1d] text-white p-2 rounded font-semibold hover:bg-gray-900"
                 type="submit"
               >
                 {loadingForm ? "Loading..." : "Login"}

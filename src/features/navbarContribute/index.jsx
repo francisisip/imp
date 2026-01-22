@@ -44,7 +44,7 @@ export default function Nav() {
           <Logo height={30} subTitle="contribute" />
         </Link>
       </div>
-      <div ref={wrapperRef} className="flex flex-grow align-middle justify-end">
+      <div ref={wrapperRef} className="flex flex-grow align-middle justify-end relative">
         <SolidButton
           onClick={menuToggle}
           className={`mr-2 md:mr-5 pt-4 z-10 hover:bg-red-500 hover:text-white border-red-500 ${
@@ -56,13 +56,13 @@ export default function Nav() {
           Menu
         </SolidButton>
         <div
-          className={
+          className={`absolute mt-16 mr-5 w-32 z-20 rounded-md shadow-lg bg-white ring-1 ring-black ring-opacity-5 transition-all duration-300 ease-in-out origin-top-right ${
             menuState
-              ? "transition-all duration-300 ease-in-out absolute mt-16 mr-5 cursor-default w-32 z-20 rounded-md shadow-lg bg-white ring-1 ring-black ring-opacity-5 focus:outline-none"
-              : "absolute opacity-0 left-0 h-0 w-0 cursor-default z-0"
-          }
+              ? "opacity-100 scale-100 pointer-events-auto"
+              : "opacity-0 scale-95 pointer-events-none"
+          }`}
         >
-          <ul className={`${styles.ul} ${menuState ? "block" : "hidden"}`}>
+          <ul className={styles.ul}>
             <li><Link href="/">Home</Link></li>
             <hr className="my-1" />
             <li><Link href="/contribute/">Dashboard</Link></li>

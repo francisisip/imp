@@ -61,7 +61,7 @@ export default function AboutSection() {
           {/* LEFT ARROW BUTTON */}
           <button 
             type="button" 
-            className="outline-none focus:outline-none border-black border-2 p-2 text-gray-800 transition-colors duration-300 ease-in-out hover:text-white hover:bg-gray-800" 
+            className="outline-none focus:outline-none border-black border-2 p-2 text-[#1d1d1d] transition-colors duration-300 ease-in-out hover:text-white hover:bg-[#1d1d1d]" 
             onClick={() => { setSlide((slideState - 1 + max) % max); scrollTop(); }}
             aria-label="Previous Slide"
           > 
@@ -73,7 +73,7 @@ export default function AboutSection() {
           {/* RIGHT ARROW BUTTON */}
           <button 
             type="button" 
-            className="outline-none focus:outline-none border-black border-2 p-2 text-gray-800 transition-colors duration-300 ease-in-out hover:text-white hover:bg-gray-800" 
+            className="outline-none focus:outline-none border-black border-2 p-2 text-[#1d1d1d] transition-colors duration-300 ease-in-out hover:text-white hover:bg-[#1d1d1d]" 
             onClick={() => { setSlide((slideState + 1) % max); scrollTop(); }}
             aria-label="Next Slide"
           > 

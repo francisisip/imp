@@ -17,6 +17,9 @@ export default function ContributePage({ session }) {
   const activeSession = clientSession || session;
   const username = activeSession?.user?.username || "";
 
+  const baseButton =
+    "transition-all duration-500 ease-in-out font-semibold py-2 px-4 rounded border hover:-translate-y-0.5 hover:shadow-md";
+
   return (
     <Page
       title="Dashboard - Imprint Contribute"
@@ -29,16 +32,21 @@ export default function ContributePage({ session }) {
           <div className="flex flex-col pt-8 md:flex-row justify-between items-center md:items-start">
             <H2>{username}</H2>
             <div className="mt-4 md:mt-2 flex space-x-4">
-              <OutlineButton className="border hover:border-black">
-                <Link href="/contribute/help" passHref>
+              <Link href="/contribute/help">
+                <button
+                  className={`${baseButton} text-[#1d1d1d] hover:border-[#1d1d1d] `}
+                >
                   Annotation Guide
-                </Link>
-              </OutlineButton>
-              <button className="bg-primary transition-all font-semibold text-white hover:bg-opacity-90 py-2 px-4 border border-primary rounded duration-500 ease-in-out">
-                <Link href="/contribute/annotate" passHref>
+                </button>
+              </Link>
+
+              <Link href="/contribute/annotate">
+                <button
+                  className={`${baseButton} bg-primary border-primary text-white hover:bg-opacity-90`}
+                >
                   Start Annotating
-                </Link>
-              </button>
+                </button>
+              </Link>
             </div>
           </div>
         </div>
